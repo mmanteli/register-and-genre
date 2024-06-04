@@ -1,0 +1,12 @@
+.ipynb_checkpoints
+models
+cache
+checkpoints
+logs
+mlruns
+new_logs
+new_results
+*.gz
+looking_at_the_eye*
+*.html
+matrix_test

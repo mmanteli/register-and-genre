@@ -1,2 +1,1 @@
-# register-and-genre
-Studying the overlap between register and genre
+## Repository for cross-labeling texts with register and genre labels

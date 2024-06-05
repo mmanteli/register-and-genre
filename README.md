@@ -1,1 +1,5 @@
-## Repository for cross-labeling texts with register and genre labels
+## Repository for cross-labeling documents with register and genre labels
+
+We apply machine learning to train two text classifiers: one targeting registers and one focusing on genres. We utilize these classifiers to predict the classes for a large web corpus. Then, we 1) evaluate the distributions of the text classes predicted using the two classifiers; 2) analyze the intersections of the classes, and 3) examine how the combination of the two approaches extends the metadata available for the corpus.
+
+In our experiments, we see some expected combinations between certain registers and genres, such as the Lyrical register and the Literature & Fiction genre often coinciding, but equally registers such as Interactive Discussion being divided into multiple genres, like Engineering & Transportation and Politics & Social Sciences based on the topic of the discussion. Our preliminary qualitative evaluation shows that the predicted genre and register labels provide valuable auxiliary information which facilitates the use of the corpus in new ways.

@@ -16,7 +16,8 @@ rm logs/current.err
 rm logs/current.out
 ln -s $SLURM_JOB_NAME$SLURM_JOBID.err logs/current.err
 ln -s $SLURM_JOB_NAME$SLURM_JOBID.out logs/current.out
-
+mkdir -p models
+date=$(date +"%Y-%m-%d-%H-%M")
 module load pytorch
 
 srun python train_ml_with_defined_classes.py \
@@ -26,8 +27,8 @@ srun python train_ml_with_defined_classes.py \
     --epochs=8 \
     --batch_size=8 \
     --model_name='xlm-roberta-large' \
-    --save_model=models/xlmr-large-model-bce-loss2.pt \
-    --result_file=models/xlmr-large-model-bce-loss2.txt \
+    --save_model=models/xlmr-large-${date}.pt \
+    --result_file=models/xlmr-large-${date}.txt \
     --random_excerpt=False
 
 # xlrm models: 1=lr=1e-5  2=lr=5e-5 3=lr=5e-6 => 3 best results for BASE

@@ -10,3 +10,6 @@ new_results
 looking_at_the_eye*
 *.html
 matrix_test
+*.err
+*.out
+tvenv

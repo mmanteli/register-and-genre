@@ -6,6 +6,7 @@ logs
 mlruns
 new_logs
 new_results
+predict_logs
 *.gz
 looking_at_the_eye*
 *.html

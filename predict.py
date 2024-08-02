@@ -2,7 +2,7 @@ import torch
 import transformers
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import re
-from datasets import load_dataset, Dataset
+from datasets import load_dataset, Dataset, DatasetDict
 import numpy as np
 import datasets
 from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
@@ -70,8 +70,9 @@ def argparser():
                     help='Path to trained genre model')
     ap.add_argument('--register_model', default=REGISTER_MODEL,
                     help='Path to trained register model')
-    ap.add_argument('--data_name',type=str, choices=["register_oscar", "CORE", "TurkuNLP/genre-6"],
+    ap.add_argument('--data_name', '--data', type=str, choices=["register_oscar", "sampled_reg_oscar", "CORE", "TurkuNLP/genre-6"],
                     required=True, help='Name of the dataset')
+    ap.add_argument('--sample', type=int, default=0, help="if not 0, searching for sample.")
     ap.add_argument('--language',  type=json.loads, default=["en"], metavar='LIST-LIKE',
                     help='Language to be used from the dataset, if applicable. Give as \'["en","zh"]\' ')
     ap.add_argument('--downsample', metavar="BOOL", type=bool,
@@ -178,10 +179,16 @@ if __name__=="__main__":
         data = pd.read_csv("/scratch/project_2009199/register-vs-genre/data/CORE/test.tsv.gz", delimiter="\t", names = ["label","id", "text"], on_bad_lines='skip')
         # for predicting make this a HF dataset
         dataset = Dataset.from_pandas(data)
-    if options.data_name=="register_oscar":
+    elif options.data_name=="register_oscar":
         dataset = datasets.load_from_disk("/scratch/project_2009199/sampling_oscar/final_reg_oscar/en.hf")
         #dataset = dataset.filter(lambda example, idx: idx % 2 == 0, with_indices=True)
-        
+    elif options.data_name == "sampled_reg_oscar":
+        if options.sample==0:
+            data = pd.read_json("/scratch/project_2009199/register-vs-genre/oscar-sample/sample_full_en.jsonl", lines=True)
+        else:
+            data = pd.read_json("/scratch/project_2009199/register-vs-genre/oscar-sample/split_sample_en0"+str(options.sample)+".jsonl", lines=True)
+        dataset = DatasetDict({"train":Dataset.from_pandas(data)})
+        del data
     #dataset = read_dataset(options)
     #dataset = dataset.map(wrap_preprocess(options))
     #dataset, mlb_classes = binarize(dataset, options)
@@ -190,7 +197,7 @@ if __name__=="__main__":
 
     print(dataset, flush=True)
 
-    print("Dataset loaded. Ready for predictions.\n")
+    print("Dataset loaded. Ready for predictions.\n", flush=True)
     p_g, p_r = run(dataset, model_genre, model_register, options)
 
     print("PREDICTION DONE")
@@ -211,6 +218,6 @@ if __name__=="__main__":
     #print(dataset)
     print(f'Saving to {options.results}.tsv')
     #dataset["train"].to_csv(options.results+"large_large_03_04.tsv", sep='\t')
-    data.to_csv(options.results+"large_multiL-large_03_04.tsv", sep='\t')
+    data.to_csv(options.results+"020824_large_multiL-large_03_04.tsv", sep='\t')
     print("ALL DONE")
 

@@ -1,0 +1,932 @@
+Topic analysis for genre-register labelled data. 
+Using 1 topics from <= 2000 suffled documents, with classes where num_examples < 20 is marked separately.
+Stopwords from nltk english and wordnetlemmatizer. Lowercased and punctuation cleaned.
+---------------------------
+Now in ('HI', 'Cookbooks, Food & Wine')
+Support is 39
+[(0,
+  '0.005*"add" + 0.004*"like" + 0.004*"make" + 0.003*"minutes" + 0.003*"one" + '
+  '0.003*"heat" + 0.003*"cook" + 0.003*"also" + 0.003*"get" + 0.003*"well"')]
+
+---------------------------
+Now in ('HI', 'Engineering & Transportation')
+Support is 22
+[(0,
+  '0.004*"one" + 0.003*"also" + 0.003*"people" + 0.003*"would" + 0.003*"need" '
+  '+ 0.003*"make" + 0.003*"know" + 0.002*"water" + 0.002*"time" + '
+  '0.002*"first"')]
+
+---------------------------
+Now in ('HI', 'Literature & Fiction')
+Support is 20
+[(0,
+  '0.015*"dating" + 0.005*"black" + 0.005*"sites" + 0.004*"online" + '
+  '0.003*"one" + 0.003*"females" + 0.003*"time" + 0.003*"women" + '
+  '0.003*"russian" + 0.002*"get"')]
+
+---------------------------
+Now in ('HI', 'Medicine & Health Sciences')
+Not enough data for ('HI', 'Medicine & Health Sciences'), num_docs = 9 < 20 = limit.
+[(0,
+  '0.009*"skin" + 0.007*"massage" + 0.006*"sick" + 0.005*"face" + 0.005*"body" '
+  '+ 0.004*"it’s" + 0.004*"get" + 0.004*"day" + 0.004*"may" + 0.003*"also"')]
+
+---------------------------
+Now in ('HI', 'None')
+Support is 73
+[(0,
+  '0.003*"time" + 0.003*"one" + 0.003*"make" + 0.003*"get" + 0.003*"need" + '
+  '0.002*"like" + 0.002*"also" + 0.002*"new" + 0.002*"us" + 0.002*"may"')]
+
+---------------------------
+Now in ('HI', 'Politics & Social Sciences')
+Support is 60
+[(0,
+  '0.004*"one" + 0.003*"use" + 0.003*"get" + 0.003*"also" + 0.003*"make" + '
+  '0.003*"need" + 0.003*"like" + 0.002*"new" + 0.002*"time" + 0.002*"dating"')]
+
+---------------------------
+Now in ('HI', 'Science & Math')
+Not enough data for ('HI', 'Science & Math'), num_docs = 6 < 20 = limit.
+[(0,
+  '0.008*"dbcc" + 0.005*"vector" + 0.005*"table" + 0.005*"checktable" + '
+  '0.005*"checks" + 0.004*"use" + 0.004*"vectors" + 0.003*"using" + '
+  '0.003*"need" + 0.003*"consistency"')]
+
+---------------------------
+Now in ('ID', 'Engineering & Transportation')
+Support is 43
+[(0,
+  '0.005*"one" + 0.004*"get" + 0.004*"would" + 0.004*"like" + 0.003*"money" + '
+  '0.003*"use" + 0.003*"also" + 0.003*"time" + 0.003*"make" + 0.002*"want"')]
+
+---------------------------
+Now in ('ID', 'Literature & Fiction')
+Support is 82
+[(0,
+  '0.005*"like" + 0.004*"one" + 0.004*"get" + 0.003*"would" + 0.003*"good" + '
+  '0.003*"time" + 0.003*"think" + 0.003*"know" + 0.002*"really" + '
+  '0.002*"much"')]
+
+---------------------------
+Now in ('ID', 'Medicine & Health Sciences')
+Not enough data for ('ID', 'Medicine & Health Sciences'), num_docs = 5 < 20 = limit.
+[(0,
+  '0.005*"care" + 0.004*"like" + 0.004*"surgery" + 0.004*"mom" + 0.003*"i’m" + '
+  '0.003*"abortion" + 0.003*"back" + 0.003*"new" + 0.003*"early" + '
+  '0.003*"forum"')]
+
+---------------------------
+Now in ('ID', 'None')
+Support is 64
+[(0,
+  '0.005*"time" + 0.005*"fat" + 0.004*"like" + 0.004*"would" + 0.004*"one" + '
+  '0.003*"body" + 0.003*"get" + 0.003*"workout" + 0.003*"people" + '
+  '0.002*"also"')]
+
+---------------------------
+Now in ('ID', 'Politics & Social Sciences')
+Support is 42
+[(0,
+  '0.004*"would" + 0.003*"one" + 0.003*"get" + 0.003*"homeaway" + 0.003*"like" '
+  '+ 0.002*"also" + 0.002*"time" + 0.002*"want" + 0.002*"make" + 0.002*"us"')]
+
+---------------------------
+Now in ('ID', 'Science & Math')
+Not enough data for ('ID', 'Science & Math'), num_docs = 3 < 20 = limit.
+[(0,
+  '0.024*"ln" + 0.012*"theyre" + 0.010*"like" + 0.010*"them" + 0.010*"though" '
+  '+ 0.010*"think" + 0.010*"old" + 0.010*"825" + 0.010*"2" + 0.010*"this"')]
+
+---------------------------
+Now in ('IN', 'Cookbooks, Food & Wine')
+Not enough data for ('IN', 'Cookbooks, Food & Wine'), num_docs = 13 < 20 = limit.
+[(0,
+  '0.005*"brush" + 0.005*"fruit" + 0.005*"food" + 0.004*"like" + '
+  '0.004*"quality" + 0.004*"steel" + 0.004*"products" + 0.004*"spam®" + '
+  '0.004*"silicone" + 0.003*"stainless"')]
+
+---------------------------
+Now in ('IN', 'Engineering & Transportation')
+Support is 510
+[(0,
+  '0.003*"one" + 0.003*"also" + 0.003*"new" + 0.002*"may" + 0.002*"use" + '
+  '0.002*"time" + 0.002*"system" + 0.002*"car" + 0.002*"need" + 0.002*"used"')]
+
+---------------------------
+Now in ('IN', 'Literature & Fiction')
+Support is 961
+[(0,
+  '0.004*"dating" + 0.003*"one" + 0.003*"new" + 0.003*"free" + 0.002*"also" + '
+  '0.002*"like" + 0.002*"online" + 0.002*"pdf" + 0.002*"time" + 0.002*"book"')]
+
+---------------------------
+Now in ('IN', 'Medicine & Health Sciences')
+Support is 160
+[(0,
+  '0.004*"infection" + 0.004*"treatment" + 0.003*"health" + 0.003*"hiv" + '
+  '0.003*"also" + 0.003*"women" + 0.003*"persons" + 0.002*"use" + 0.002*"one" '
+  '+ 0.002*"may"')]
+
+---------------------------
+Now in ('IN', 'None')
+Support is 819
+[(0,
+  '0.003*"one" + 0.003*"also" + 0.002*"new" + 0.002*"time" + 0.002*"get" + '
+  '0.002*"best" + 0.002*"like" + 0.002*"may" + 0.002*"make" + 0.002*"use"')]
+
+---------------------------
+Now in ('IN', 'Politics & Social Sciences')
+Support is 683
+[(0,
+  '0.003*"one" + 0.003*"also" + 0.003*"new" + 0.002*"time" + 0.002*"may" + '
+  '0.002*"people" + 0.002*"number" + 0.002*"born" + 0.002*"information" + '
+  '0.002*"work"')]
+
+---------------------------
+Now in ('IN', 'Science & Math')
+Support is 70
+[(0,
+  '0.004*"–" + 0.004*"plant" + 0.003*"church" + 0.003*"ca2" + 0.003*"new" + '
+  '0.003*"also" + 0.002*"time" + 0.002*"et" + 0.002*"al" + 0.002*"one"')]
+
+---------------------------
+Now in ('IP', 'Cookbooks, Food & Wine')
+Not enough data for ('IP', 'Cookbooks, Food & Wine'), num_docs = 7 < 20 = limit.
+[(0,
+  '0.009*"brush" + 0.007*"quality" + 0.007*"silicone" + 0.005*"use" + '
+  '0.005*"food" + 0.005*"brushes" + 0.005*"steel" + 0.005*"basting" + '
+  '0.004*"stainless" + 0.004*"also"')]
+
+---------------------------
+Now in ('IP', 'Engineering & Transportation')
+Support is 216
+[(0,
+  '0.003*"also" + 0.003*"new" + 0.003*"car" + 0.003*"us" + 0.003*"service" + '
+  '0.002*"one" + 0.002*"time" + 0.002*"essay" + 0.002*"services" + '
+  '0.002*"insurance"')]
+
+---------------------------
+Now in ('IP', 'Literature & Fiction')
+Support is 304
+[(0,
+  '0.003*"new" + 0.003*"one" + 0.002*"time" + 0.002*"book" + 0.002*"great" + '
+  '0.002*"also" + 0.002*"day" + 0.002*"tourmaline" + 0.002*"like" + '
+  '0.002*"life"')]
+
+---------------------------
+Now in ('IP', 'Medicine & Health Sciences')
+Support is 23
+[(0,
+  '0.004*"skin" + 0.003*"plus" + 0.003*"health" + 0.003*"–" + 0.003*"body" + '
+  '0.003*"dog" + 0.003*"help" + 0.003*"also" + 0.003*"new" + 0.002*"proactol"')]
+
+---------------------------
+Now in ('IP', 'None')
+Support is 270
+[(0,
+  '0.003*"one" + 0.003*"also" + 0.002*"us" + 0.002*"get" + 0.002*"new" + '
+  '0.002*"time" + 0.002*"best" + 0.002*"like" + 0.002*"home" + 0.002*"use"')]
+
+---------------------------
+Now in ('IP', 'Politics & Social Sciences')
+Support is 106
+[(0,
+  '0.003*"jehovah" + 0.003*"time" + 0.003*"one" + 0.003*"also" + 0.003*"devil" '
+  '+ 0.003*"people" + 0.002*"–" + 0.002*"new" + 0.002*"years" + '
+  '0.002*"stalin"')]
+
+---------------------------
+Now in ('IP', 'Science & Math')
+Not enough data for ('IP', 'Science & Math'), num_docs = 7 < 20 = limit.
+[(0,
+  '0.007*"use" + 0.007*"hedgehog" + 0.006*"water" + 0.006*"food" + '
+  '0.004*"also" + 0.004*"hedgie" + 0.004*"scent" + 0.003*"using" + '
+  '0.003*"stick" + 0.003*"pet"')]
+
+---------------------------
+Now in ('LY', 'Literature & Fiction')
+Not enough data for ('LY', 'Literature & Fiction'), num_docs = 12 < 20 = limit.
+[(0,
+  '0.011*"oh" + 0.007*"cialis" + 0.007*"ey" + 0.006*"pharmacy" + '
+  '0.006*"canadian" + 0.006*"prescription" + 0.005*"lyrics" + 0.004*"bhimsen" '
+  '+ 0.004*"joshi" + 0.004*"song"')]
+
+---------------------------
+Now in ('LY', 'Politics & Social Sciences')
+Not enough data for ('LY', 'Politics & Social Sciences'), num_docs = 1 < 20 = limit.
+[(0,
+  '0.026*"sound" + 0.026*"sirens" + 0.019*"dance" + 0.013*"refuse" + '
+  '0.013*"silent" + 0.013*"shadow" + 0.013*"selfdeception" + 0.013*"released" '
+  '+ 0.013*"relax" + 0.013*"que"')]
+
+---------------------------
+Now in ('NA', 'Cookbooks, Food & Wine')
+Not enough data for ('NA', 'Cookbooks, Food & Wine'), num_docs = 3 < 20 = limit.
+[(0,
+  '0.019*"spam®" + 0.010*"products" + 0.008*"brand" + 0.006*"time" + '
+  '0.005*"would" + 0.005*"product" + 0.005*"fruit" + 0.004*"dairy" + '
+  '0.004*"milk" + 0.004*"it’s"')]
+
+---------------------------
+Now in ('NA', 'Engineering & Transportation')
+Support is 78
+[(0,
+  '0.003*"new" + 0.003*"one" + 0.003*"also" + 0.002*"would" + 0.002*"time" + '
+  '0.002*"said" + 0.002*"like" + 0.002*"first" + 0.002*"well" + 0.002*"could"')]
+
+---------------------------
+Now in ('NA', 'Literature & Fiction')
+Support is 608
+[(0,
+  '0.004*"one" + 0.003*"like" + 0.003*"new" + 0.003*"time" + 0.003*"would" + '
+  '0.002*"first" + 0.002*"get" + 0.002*"also" + 0.002*"people" + 0.002*"said"')]
+
+---------------------------
+Now in ('NA', 'Medicine & Health Sciences')
+Support is 34
+[(0,
+  '0.003*"one" + 0.003*"cancer" + 0.003*"health" + 0.003*"new" + 0.003*"dla" + '
+  '0.003*"widoczny" + 0.003*"zalogowanych" + 0.002*"also" + 0.002*"get" + '
+  '0.002*"people"')]
+
+---------------------------
+Now in ('NA', 'None')
+Support is 221
+[(0,
+  '0.003*"one" + 0.003*"new" + 0.003*"time" + 0.003*"like" + 0.003*"also" + '
+  '0.002*"get" + 0.002*"–" + 0.002*"would" + 0.002*"year" + 0.002*"people"')]
+
+---------------------------
+Now in ('NA', 'Politics & Social Sciences')
+Support is 471
+[(0,
+  '0.004*"said" + 0.004*"one" + 0.003*"also" + 0.003*"new" + 0.003*"would" + '
+  '0.002*"people" + 0.002*"time" + 0.002*"first" + 0.002*"two" + 0.002*"us"')]
+
+---------------------------
+Now in ('NA', 'Science & Math')
+Not enough data for ('NA', 'Science & Math'), num_docs = 16 < 20 = limit.
+[(0,
+  '0.004*"dumpster" + 0.003*"also" + 0.003*"time" + 0.002*"fishing" + '
+  '0.002*"one" + 0.002*"us" + 0.002*"fish" + 0.002*"species" + 0.002*"around" '
+  '+ 0.002*"would"')]
+
+---------------------------
+Now in ('None', 'Engineering & Transportation')
+Not enough data for ('None', 'Engineering & Transportation'), num_docs = 2 < 20 = limit.
+[(0,
+  '0.010*"ceiling" + 0.007*"slot" + 0.006*"…" + 0.006*"slotomania" + '
+  '0.006*"mod" + 0.006*"apk" + 0.006*"machines" + 0.005*"paint" + 0.004*"2" + '
+  '0.004*"best"')]
+
+---------------------------
+Now in ('None', 'Literature & Fiction')
+Support is 54
+[(0,
+  '0.013*"sarah" + 0.010*"reese" + 0.008*"to" + 0.008*"cut" + '
+  '0.005*"terminator" + 0.005*"night" + 0.004*"int" + 0.003*"like" + '
+  '0.003*"one" + 0.003*"ext"')]
+
+---------------------------
+Now in ('None', 'Medicine & Health Sciences')
+Not enough data for ('None', 'Medicine & Health Sciences'), num_docs = 2 < 20 = limit.
+[(0,
+  '0.008*"home" + 0.005*"get" + 0.005*"nursing" + 0.005*"time" + '
+  '0.004*"family" + 0.004*"parents" + 0.004*"care" + 0.004*"one" + 0.004*"see" '
+  '+ 0.003*"mom"')]
+
+---------------------------
+Now in ('None', 'None')
+Support is 26
+[(0,
+  '0.003*"work" + 0.003*"one" + 0.003*"near" + 0.003*"also" + 0.003*"design" + '
+  '0.003*"like" + 0.002*"would" + 0.002*"great" + 0.002*"holiday" + '
+  '0.002*"radiation"')]
+
+---------------------------
+Now in ('None', 'Politics & Social Sciences')
+Not enough data for ('None', 'Politics & Social Sciences'), num_docs = 11 < 20 = limit.
+[(0,
+  '0.008*"love" + 0.006*"one" + 0.005*"day" + 0.005*"website" + 0.004*"would" '
+  '+ 0.004*"peace" + 0.004*"german" + 0.003*"make" + 0.003*"could" + '
+  '0.003*"best"')]
+
+---------------------------
+Now in ('OP', 'Cookbooks, Food & Wine')
+Not enough data for ('OP', 'Cookbooks, Food & Wine'), num_docs = 4 < 20 = limit.
+[(0,
+  '0.008*"5" + 0.006*"like" + 0.005*"great" + 0.005*"even" + 0.005*"one" + '
+  '0.005*"food" + 0.004*"pan" + 0.004*"use" + 0.004*"diet" + 0.004*"also"')]
+
+---------------------------
+Now in ('OP', 'Engineering & Transportation')
+Support is 34
+[(0,
+  '0.005*"would" + 0.003*"one" + 0.003*"make" + 0.003*"also" + 0.003*"company" '
+  '+ 0.003*"time" + 0.002*"like" + 0.002*"new" + 0.002*"car" + 0.002*"could"')]
+
+---------------------------
+Now in ('OP', 'Literature & Fiction')
+Support is 261
+[(0,
+  '0.004*"one" + 0.003*"like" + 0.003*"would" + 0.003*"time" + 0.002*"also" + '
+  '0.002*"new" + 0.002*"us" + 0.002*"get" + 0.002*"people" + 0.002*"even"')]
+
+---------------------------
+Now in ('OP', 'Medicine & Health Sciences')
+Not enough data for ('OP', 'Medicine & Health Sciences'), num_docs = 13 < 20 = limit.
+[(0,
+  '0.004*"one" + 0.004*"get" + 0.003*"time" + 0.003*"make" + 0.003*"good" + '
+  '0.002*"need" + 0.002*"like" + 0.002*"life" + 0.002*"money" + 0.002*"it’s"')]
+
+---------------------------
+Now in ('OP', 'None')
+Support is 98
+[(0,
+  '0.004*"time" + 0.004*"one" + 0.003*"also" + 0.003*"like" + 0.003*"get" + '
+  '0.003*"dumpster" + 0.003*"new" + 0.002*"–" + 0.002*"may" + 0.002*"need"')]
+
+---------------------------
+Now in ('OP', 'Politics & Social Sciences')
+Support is 213
+[(0,
+  '0.004*"one" + 0.003*"people" + 0.003*"time" + 0.003*"would" + 0.003*"us" + '
+  '0.003*"like" + 0.003*"get" + 0.002*"make" + 0.002*"new" + 0.002*"also"')]
+
+---------------------------
+Now in ('SP', 'Literature & Fiction')
+Not enough data for ('SP', 'Literature & Fiction'), num_docs = 12 < 20 = limit.
+[(0,
+  '0.006*"people" + 0.005*"one" + 0.004*"it’s" + 0.004*"would" + 0.004*"like" '
+  '+ 0.004*"think" + 0.004*"really" + 0.003*"time" + 0.003*"work" + '
+  '0.003*"music"')]
+
+---------------------------
+Now in ('SP', 'None')
+Not enough data for ('SP', 'None'), num_docs = 2 < 20 = limit.
+[(0,
+  '0.017*"housing" + 0.012*"australia" + 0.011*"could" + 0.009*"would" + '
+  '0.008*"senator" + 0.008*"industry" + 0.008*"home" + 0.007*"government" + '
+  '0.006*"beef" + 0.006*"south"')]
+
+---------------------------
+Now in ('SP', 'Politics & Social Sciences')
+Not enough data for ('SP', 'Politics & Social Sciences'), num_docs = 8 < 20 = limit.
+[(0,
+  '0.006*"people" + 0.006*"president" + 0.005*"one" + 0.004*"know" + '
+  '0.004*"government" + 0.004*"us" + 0.003*"going" + 0.003*"would" + '
+  '0.003*"new" + 0.003*"liberty"')]
+
+---------------------------
+Now in ('av', 'Cookbooks, Food & Wine')
+Not enough data for ('av', 'Cookbooks, Food & Wine'), num_docs = 2 < 20 = limit.
+[(0,
+  '0.009*"like" + 0.008*"food" + 0.008*"diet" + 0.007*"bread" + 0.007*"fats" + '
+  '0.006*"get" + 0.005*"one" + 0.005*"foods" + 0.005*"even" + 0.005*"also"')]
+
+---------------------------
+Now in ('av', 'Engineering & Transportation')
+Not enough data for ('av', 'Engineering & Transportation'), num_docs = 4 < 20 = limit.
+[(0,
+  '0.010*"junk" + 0.010*"car" + 0.008*"make" + 0.007*"modern" + 0.007*"buyer" '
+  '+ 0.007*"cabinet" + 0.007*"sure" + 0.007*"sink" + 0.007*"vanity" + '
+  '0.006*"bathroom"')]
+
+---------------------------
+Now in ('av', 'Literature & Fiction')
+Not enough data for ('av', 'Literature & Fiction'), num_docs = 4 < 20 = limit.
+[(0,
+  '0.012*"students" + 0.011*"college" + 0.006*"bst" + 0.006*"education" + '
+  '0.005*"management" + 0.005*"ex" + 0.005*"know" + 0.005*"program" + '
+  '0.005*"someone" + 0.004*"computer"')]
+
+---------------------------
+Now in ('av', 'Medicine & Health Sciences')
+Not enough data for ('av', 'Medicine & Health Sciences'), num_docs = 5 < 20 = limit.
+[(0,
+  '0.009*"sick" + 0.006*"it’s" + 0.005*"time" + 0.005*"day" + 0.005*"skin" + '
+  '0.005*"you’re" + 0.005*"work" + 0.005*"get" + 0.004*"may" + '
+  '0.004*"important"')]
+
+---------------------------
+Now in ('av', 'None')
+Not enough data for ('av', 'None'), num_docs = 12 < 20 = limit.
+[(0,
+  '0.005*"may" + 0.004*"catering" + 0.004*"get" + 0.004*"wine" + 0.004*"new" + '
+  '0.004*"make" + 0.003*"child" + 0.003*"children" + 0.003*"dog" + '
+  '0.003*"food"')]
+
+---------------------------
+Now in ('av', 'Politics & Social Sciences')
+Support is 29
+[(0,
+  '0.006*"get" + 0.004*"make" + 0.004*"time" + 0.004*"us" + 0.003*"one" + '
+  '0.003*"life" + 0.003*"may" + 0.003*"need" + 0.003*"good" + 0.003*"would"')]
+
+---------------------------
+Now in ('ds', 'Cookbooks, Food & Wine')
+Not enough data for ('ds', 'Cookbooks, Food & Wine'), num_docs = 6 < 20 = limit.
+[(0,
+  '0.010*"brush" + 0.007*"quality" + 0.007*"silicone" + 0.006*"use" + '
+  '0.005*"food" + 0.005*"brushes" + 0.005*"basting" + 0.005*"steel" + '
+  '0.004*"stainless" + 0.004*"also"')]
+
+---------------------------
+Now in ('ds', 'Engineering & Transportation')
+Support is 196
+[(0,
+  '0.003*"also" + 0.003*"car" + 0.003*"new" + 0.003*"us" + 0.003*"service" + '
+  '0.003*"one" + 0.002*"essay" + 0.002*"insurance" + 0.002*"time" + '
+  '0.002*"services"')]
+
+---------------------------
+Now in ('ds', 'Literature & Fiction')
+Support is 286
+[(0,
+  '0.003*"one" + 0.003*"new" + 0.002*"book" + 0.002*"time" + 0.002*"day" + '
+  '0.002*"great" + 0.002*"tourmaline" + 0.002*"also" + 0.002*"like" + '
+  '0.002*"life"')]
+
+---------------------------
+Now in ('ds', 'Medicine & Health Sciences')
+Support is 20
+[(0,
+  '0.004*"plus" + 0.004*"skin" + 0.003*"–" + 0.003*"dog" + 0.003*"body" + '
+  '0.003*"health" + 0.003*"help" + 0.003*"proactol" + 0.003*"weight" + '
+  '0.003*"diet"')]
+
+---------------------------
+Now in ('ds', 'None')
+Support is 243
+[(0,
+  '0.003*"one" + 0.003*"also" + 0.003*"us" + 0.002*"get" + 0.002*"new" + '
+  '0.002*"time" + 0.002*"best" + 0.002*"like" + 0.002*"home" + 0.002*"great"')]
+
+---------------------------
+Now in ('ds', 'Politics & Social Sciences')
+Support is 87
+[(0,
+  '0.004*"jehovah" + 0.003*"one" + 0.003*"time" + 0.003*"devil" + 0.003*"also" '
+  '+ 0.003*"people" + 0.003*"–" + 0.002*"new" + 0.002*"stalin" + '
+  '0.002*"years"')]
+
+---------------------------
+Now in ('ds', 'Science & Math')
+Not enough data for ('ds', 'Science & Math'), num_docs = 6 < 20 = limit.
+[(0,
+  '0.007*"use" + 0.007*"hedgehog" + 0.006*"water" + 0.006*"food" + '
+  '0.004*"also" + 0.004*"scent" + 0.004*"hedgie" + 0.003*"using" + 0.003*"pet" '
+  '+ 0.003*"stick"')]
+
+---------------------------
+Now in ('dtp', 'Cookbooks, Food & Wine')
+Not enough data for ('dtp', 'Cookbooks, Food & Wine'), num_docs = 4 < 20 = limit.
+[(0,
+  '0.012*"fruit" + 0.011*"spam®" + 0.007*"products" + 0.006*"quality" + '
+  '0.005*"fruits" + 0.004*"also" + 0.004*"business" + 0.004*"like" + '
+  '0.003*"high" + 0.003*"small"')]
+
+---------------------------
+Now in ('dtp', 'Engineering & Transportation')
+Support is 235
+[(0,
+  '0.003*"also" + 0.003*"new" + 0.002*"service" + 0.002*"car" + '
+  '0.002*"services" + 0.002*"time" + 0.002*"essay" + 0.002*"one" + '
+  '0.002*"system" + 0.002*"insurance"')]
+
+---------------------------
+Now in ('dtp', 'Literature & Fiction')
+Support is 430
+[(0,
+  '0.003*"new" + 0.003*"one" + 0.003*"also" + 0.002*"like" + 0.002*"time" + '
+  '0.002*"city" + 0.002*"people" + 0.002*"get" + 0.002*"first" + '
+  '0.002*"would"')]
+
+---------------------------
+Now in ('dtp', 'Medicine & Health Sciences')
+Support is 60
+[(0,
+  '0.008*"infection" + 0.007*"hiv" + 0.006*"treatment" + 0.006*"persons" + '
+  '0.006*"women" + 0.004*"risk" + 0.003*"sex" + 0.003*"health" + '
+  '0.003*"clinical" + 0.003*"test"')]
+
+---------------------------
+Now in ('dtp', 'None')
+Support is 373
+[(0,
+  '0.003*"one" + 0.002*"also" + 0.002*"new" + 0.002*"time" + 0.002*"like" + '
+  '0.002*"us" + 0.001*"people" + 0.001*"get" + 0.001*"best" + 0.001*"many"')]
+
+---------------------------
+Now in ('dtp', 'Politics & Social Sciences')
+Support is 303
+[(0,
+  '0.005*"born" + 0.004*"number" + 0.004*"county" + 0.003*"address" + '
+  '0.003*"co" + 0.003*"id" + 0.003*"giving" + 0.003*"registered" + 0.003*"new" '
+  '+ 0.003*"vote"')]
+
+---------------------------
+Now in ('dtp', 'Science & Math')
+Support is 26
+[(0,
+  '0.003*"program" + 0.003*"students" + 0.003*"also" + 0.003*"sex" + '
+  '0.003*"species" + 0.003*"pharmacy" + 0.002*"free" + 0.002*"water" + '
+  '0.002*"online" + 0.002*"occupational"')]
+
+---------------------------
+Now in ('en', 'Engineering & Transportation')
+Not enough data for ('en', 'Engineering & Transportation'), num_docs = 1 < 20 = limit.
+[(0,
+  '0.026*"stock" + 0.026*"rollsroyce" + 0.026*"london" + 0.020*"plc" + '
+  '0.020*"billion" + 0.020*"defence" + 0.020*"2011" + 0.020*"holdings" + '
+  '0.013*"multinational" + 0.013*"marketsrollsroyce"')]
+
+---------------------------
+Now in ('en', 'Literature & Fiction')
+Not enough data for ('en', 'Literature & Fiction'), num_docs = 7 < 20 = limit.
+[(0,
+  '0.008*"power" + 0.008*"dorje" + 0.006*"james" + 0.005*"harding" + '
+  '0.004*"level" + 0.004*"manifester" + 0.004*"english" + 0.004*"one" + '
+  '0.004*"ford" + 0.004*"album"')]
+
+---------------------------
+Now in ('en', 'None')
+Not enough data for ('en', 'None'), num_docs = 2 < 20 = limit.
+[(0,
+  '0.055*"jawa" + 0.036*"kulon" + 0.036*"indonesia" + 0.036*"indonesian" + '
+  '0.036*"jabar" + 0.036*"java" + 0.036*"abbreviated" + 0.036*"west" + '
+  '0.036*"province" + 0.036*"used"')]
+
+---------------------------
+Now in ('en', 'Politics & Social Sciences')
+Not enough data for ('en', 'Politics & Social Sciences'), num_docs = 5 < 20 = limit.
+[(0,
+  '0.008*"federal" + 0.008*"disaster" + 0.007*"insurance" + 0.005*"mitigation" '
+  '+ 0.004*"pickens" + 0.004*"disasters" + 0.004*"costs" + 0.004*"flood" + '
+  '0.004*"market" + 0.003*"assistance"')]
+
+---------------------------
+Now in ('fi', 'Engineering & Transportation')
+Not enough data for ('fi', 'Engineering & Transportation'), num_docs = 1 < 20 = limit.
+[(0,
+  '0.017*"print" + 0.017*"parts" + 0.017*"design" + 0.014*"send" + '
+  '0.014*"request" + 0.014*"printed" + 0.014*"us" + 0.011*"events" + '
+  '0.011*"please" + 0.011*"anything"')]
+
+---------------------------
+Now in ('fi', 'Politics & Social Sciences')
+Not enough data for ('fi', 'Politics & Social Sciences'), num_docs = 2 < 20 = limit.
+[(0,
+  '0.020*"resa" + 0.017*"resident" + 0.015*"teachers" + 0.015*"mentoring" + '
+  '0.014*"program" + 0.012*"professional" + 0.012*"educator" + 0.012*"task" + '
+  '0.011*"focused" + 0.009*"ohio"')]
+
+---------------------------
+Now in ('it', 'Literature & Fiction')
+Not enough data for ('it', 'Literature & Fiction'), num_docs = 12 < 20 = limit.
+[(0,
+  '0.006*"people" + 0.005*"one" + 0.004*"it’s" + 0.004*"would" + 0.004*"like" '
+  '+ 0.004*"think" + 0.004*"really" + 0.003*"time" + 0.003*"work" + '
+  '0.003*"music"')]
+
+---------------------------
+Now in ('it', 'Politics & Social Sciences')
+Not enough data for ('it', 'Politics & Social Sciences'), num_docs = 6 < 20 = limit.
+[(0,
+  '0.006*"people" + 0.006*"president" + 0.005*"one" + 0.005*"government" + '
+  '0.004*"know" + 0.004*"us" + 0.004*"liberty" + 0.004*"going" + 0.003*"would" '
+  '+ 0.003*"time"')]
+
+---------------------------
+Now in ('lt', 'None')
+Not enough data for ('lt', 'None'), num_docs = 1 < 20 = limit.
+[(0,
+  '0.060*"site" + 0.060*"web" + 0.036*"terms" + 0.024*"products" + '
+  '0.024*"providers" + 0.024*"purposes" + 0.024*"republication" + 0.024*"set" '
+  '+ 0.024*"shown" + 0.024*"placing"')]
+
+---------------------------
+Now in ('lt', 'Politics & Social Sciences')
+Not enough data for ('lt', 'Politics & Social Sciences'), num_docs = 7 < 20 = limit.
+[(0,
+  '0.013*"data" + 0.009*"may" + 0.009*"itshiphopmusiccom" + 0.007*"use" + '
+  '0.006*"terms" + 0.006*"competition" + 0.005*"website" + 0.005*"site" + '
+  '0.005*"act" + 0.005*"information"')]
+
+---------------------------
+Now in ('nb', 'Cookbooks, Food & Wine')
+Not enough data for ('nb', 'Cookbooks, Food & Wine'), num_docs = 1 < 20 = limit.
+[(0,
+  '0.015*"would" + 0.013*"think" + 0.013*"back" + 0.013*"time" + 0.011*"it" + '
+  '0.011*"id" + 0.011*"mum" + 0.009*"dad" + 0.009*"childhood" + '
+  '0.009*"school"')]
+
+---------------------------
+Now in ('nb', 'Engineering & Transportation')
+Not enough data for ('nb', 'Engineering & Transportation'), num_docs = 12 < 20 = limit.
+[(0,
+  '0.003*"get" + 0.003*"one" + 0.003*"would" + 0.003*"time" + 0.003*"could" + '
+  '0.003*"back" + 0.003*"jeep" + 0.003*"us" + 0.002*"little" + 0.002*"new"')]
+
+---------------------------
+Now in ('nb', 'Literature & Fiction')
+Support is 212
+[(0,
+  '0.005*"one" + 0.005*"like" + 0.004*"time" + 0.003*"get" + 0.003*"would" + '
+  '0.003*"love" + 0.003*"day" + 0.002*"know" + 0.002*"really" + 0.002*"much"')]
+
+---------------------------
+Now in ('nb', 'Medicine & Health Sciences')
+Not enough data for ('nb', 'Medicine & Health Sciences'), num_docs = 3 < 20 = limit.
+[(0,
+  '0.005*"one" + 0.005*"get" + 0.005*"baby" + 0.004*"like" + 0.004*"good" + '
+  '0.004*"im" + 0.003*"camera" + 0.003*"great" + 0.003*"first" + '
+  '0.003*"really"')]
+
+---------------------------
+Now in ('nb', 'None')
+Support is 53
+[(0,
+  '0.004*"–" + 0.004*"one" + 0.003*"time" + 0.003*"like" + 0.003*"new" + '
+  '0.003*"would" + 0.002*"year" + 0.002*"also" + 0.002*"get" + 0.002*"it’s"')]
+
+---------------------------
+Now in ('nb', 'Politics & Social Sciences')
+Support is 23
+[(0,
+  '0.004*"like" + 0.004*"time" + 0.003*"one" + 0.003*"people" + 0.003*"would" '
+  '+ 0.003*"get" + 0.003*"could" + 0.002*"internet" + 0.002*"also" + '
+  '0.002*"know"')]
+
+---------------------------
+Now in ('nb', 'Science & Math')
+Not enough data for ('nb', 'Science & Math'), num_docs = 6 < 20 = limit.
+[(0,
+  '0.007*"dumpster" + 0.004*"fishing" + 0.004*"fish" + 0.003*"yard" + '
+  '0.003*"around" + 0.003*"would" + 0.003*"time" + 0.003*"get" + 0.003*"also" '
+  '+ 0.003*"one"')]
+
+---------------------------
+Now in ('ne', 'Cookbooks, Food & Wine')
+Not enough data for ('ne', 'Cookbooks, Food & Wine'), num_docs = 2 < 20 = limit.
+[(0,
+  '0.027*"spam®" + 0.013*"products" + 0.011*"brand" + 0.006*"product" + '
+  '0.005*"it’s" + 0.005*"cans" + 0.005*"dairy" + 0.005*"milk" + 0.004*"pork" + '
+  '0.004*"across"')]
+
+---------------------------
+Now in ('ne', 'Engineering & Transportation')
+Support is 56
+[(0,
+  '0.003*"new" + 0.002*"apparatus" + 0.002*"one" + 0.002*"also" + 0.002*"said" '
+  '+ 0.002*"would" + 0.002*"may" + 0.002*"well" + 0.002*"first" + '
+  '0.002*"market"')]
+
+---------------------------
+Now in ('ne', 'Literature & Fiction')
+Support is 162
+[(0,
+  '0.004*"new" + 0.003*"one" + 0.002*"like" + 0.002*"read" + 0.002*"said" + '
+  '0.002*"also" + 0.002*"would" + 0.002*"time" + 0.002*"first" + '
+  '0.002*"people"')]
+
+---------------------------
+Now in ('ne', 'Medicine & Health Sciences')
+Support is 30
+[(0,
+  '0.004*"cancer" + 0.004*"health" + 0.004*"dla" + 0.004*"widoczny" + '
+  '0.003*"zalogowanych" + 0.003*"new" + 0.003*"one" + 0.002*"services" + '
+  '0.002*"also" + 0.002*"disease"')]
+
+---------------------------
+Now in ('ne', 'None')
+Support is 86
+[(0,
+  '0.003*"new" + 0.003*"said" + 0.002*"one" + 0.002*"also" + 0.002*"time" + '
+  '0.002*"get" + 0.002*"first" + 0.002*"make" + 0.002*"like" + '
+  '0.002*"company"')]
+
+---------------------------
+Now in ('ne', 'Politics & Social Sciences')
+Support is 342
+[(0,
+  '0.004*"said" + 0.003*"one" + 0.003*"also" + 0.003*"new" + 0.002*"would" + '
+  '0.002*"people" + 0.002*"us" + 0.002*"two" + 0.002*"time" + 0.002*"first"')]
+
+---------------------------
+Now in ('ne', 'Science & Math')
+Not enough data for ('ne', 'Science & Math'), num_docs = 9 < 20 = limit.
+[(0,
+  '0.004*"new" + 0.004*"–" + 0.003*"us" + 0.003*"time" + 0.003*"also" + '
+  '0.003*"wetlands" + 0.003*"math" + 0.003*"grade" + 0.003*"forest" + '
+  '0.003*"trees"')]
+
+---------------------------
+Now in ('ob', 'Engineering & Transportation')
+Not enough data for ('ob', 'Engineering & Transportation'), num_docs = 4 < 20 = limit.
+[(0,
+  '0.014*"amplifier" + 0.010*"would" + 0.010*"output" + 0.010*"voltage" + '
+  '0.007*"power" + 0.006*"current" + 0.005*"input" + 0.005*"currentoutput" + '
+  '0.004*"resistor" + 0.004*"impedance"')]
+
+---------------------------
+Now in ('ob', 'Literature & Fiction')
+Support is 32
+[(0,
+  '0.005*"would" + 0.004*"angel" + 0.004*"like" + 0.004*"one" + 0.003*"think" '
+  '+ 0.003*"time" + 0.003*"get" + 0.003*"joss" + 0.002*"game" + 0.002*"even"')]
+
+---------------------------
+Now in ('ob', 'None')
+Not enough data for ('ob', 'None'), num_docs = 9 < 20 = limit.
+[(0,
+  '0.004*"like" + 0.004*"leave" + 0.003*"–" + 0.003*"get" + 0.002*"time" + '
+  '0.002*"и" + 0.002*"one" + 0.002*"think" + 0.002*"also" + 0.002*"work"')]
+
+---------------------------
+Now in ('ob', 'Politics & Social Sciences')
+Support is 71
+[(0,
+  '0.004*"one" + 0.003*"would" + 0.003*"people" + 0.003*"like" + 0.003*"us" + '
+  '0.003*"time" + 0.002*"–" + 0.002*"make" + 0.002*"also" + 0.002*"new"')]
+
+---------------------------
+Now in ('ra', 'Engineering & Transportation')
+Support is 21
+[(0,
+  '0.004*"model" + 0.004*"energy" + 0.003*"new" + 0.003*"used" + '
+  '0.003*"contact" + 0.003*"analysis" + 0.003*"flow" + 0.002*"results" + '
+  '0.002*"system" + 0.002*"study"')]
+
+---------------------------
+Now in ('ra', 'Literature & Fiction')
+Not enough data for ('ra', 'Literature & Fiction'), num_docs = 4 < 20 = limit.
+[(0,
+  '0.006*"war" + 0.005*"france" + 0.004*"french" + 0.004*"experience" + '
+  '0.004*"also" + 0.004*"berr" + 0.004*"texts" + 0.004*"memory" + '
+  '0.004*"diary" + 0.004*"humbert"')]
+
+---------------------------
+Now in ('ra', 'Medicine & Health Sciences')
+Support is 25
+[(0,
+  '0.003*"social" + 0.003*"health" + 0.003*"patients" + 0.003*"one" + '
+  '0.002*"may" + 0.002*"study" + 0.002*"also" + 0.002*"cells" + 0.002*"new" + '
+  '0.002*"immune"')]
+
+---------------------------
+Now in ('ra', 'None')
+Not enough data for ('ra', 'None'), num_docs = 14 < 20 = limit.
+[(0,
+  '0.008*"system" + 0.005*"using" + 0.005*"users" + 0.004*"paper" + '
+  '0.004*"user" + 0.003*"use" + 0.003*"results" + 0.003*"method" + '
+  '0.003*"study" + 0.003*"information"')]
+
+---------------------------
+Now in ('ra', 'Politics & Social Sciences')
+Support is 25
+[(0,
+  '0.004*"computer" + 0.003*"also" + 0.003*"nigeria" + 0.003*"one" + '
+  '0.002*"per" + 0.002*"may" + 0.002*"experience" + 0.002*"cent" + '
+  '0.002*"first" + 0.002*"peer"')]
+
+---------------------------
+Now in ('ra', 'Science & Math')
+Not enough data for ('ra', 'Science & Math'), num_docs = 11 < 20 = limit.
+[(0,
+  '0.011*"ca2" + 0.008*"al" + 0.008*"et" + 0.007*"plant" + 0.005*"fig" + '
+  '0.005*"a" + 0.005*"–" + 0.005*"patens" + 0.004*"supplementary" + '
+  '0.004*"plants"')]
+
+---------------------------
+Now in ('re', 'Cookbooks, Food & Wine')
+Support is 34
+[(0,
+  '0.005*"add" + 0.004*"like" + 0.004*"minutes" + 0.003*"make" + 0.003*"one" + '
+  '0.003*"heat" + 0.003*"cook" + 0.003*"also" + 0.003*"get" + 0.003*"well"')]
+
+---------------------------
+Now in ('re', 'Literature & Fiction')
+Not enough data for ('re', 'Literature & Fiction'), num_docs = 2 < 20 = limit.
+[(0,
+  '0.009*"add" + 0.007*"clips" + 0.007*"clip" + 0.007*"quotes" + 0.007*"walls" '
+  '+ 0.007*"video" + 0.007*"time" + 0.005*"titan" + 0.005*"butter" + '
+  '0.005*"mother"')]
+
+---------------------------
+Now in ('re', 'None')
+Not enough data for ('re', 'None'), num_docs = 13 < 20 = limit.
+[(0,
+  '0.005*"call" + 0.004*"time" + 0.004*"escort" + 0.003*"like" + '
+  '0.003*"muzaffarpur" + 0.003*"food" + 0.003*"love" + 0.003*"recipe" + '
+  '0.003*"year" + 0.003*"death"')]
+
+---------------------------
+Now in ('rs', 'Literature & Fiction')
+Support is 26
+[(0,
+  '0.007*"god" + 0.005*"saudi" + 0.004*"one" + 0.004*"us" + 0.003*"lord" + '
+  '0.003*"manoah" + 0.003*"also" + 0.003*"christ" + 0.002*"jesus" + '
+  '0.002*"life"')]
+
+---------------------------
+Now in ('rs', 'Politics & Social Sciences')
+Support is 25
+[(0,
+  '0.004*"god" + 0.004*"us" + 0.004*"saudi" + 0.003*"life" + 0.003*"one" + '
+  '0.003*"church" + 0.003*"people" + 0.003*"would" + 0.002*"time" + '
+  '0.002*"many"')]
+
+---------------------------
+Now in ('rv', 'Cookbooks, Food & Wine')
+Not enough data for ('rv', 'Cookbooks, Food & Wine'), num_docs = 1 < 20 = limit.
+[(0,
+  '0.029*"soup" + 0.029*"noodles" + 0.029*"càuda" + 0.022*"march" + '
+  '0.022*"cup" + 0.022*"noodle" + 0.022*"bagna" + 0.022*"though" + '
+  '0.015*"relaunched" + 0.015*"regular"')]
+
+---------------------------
+Now in ('rv', 'Engineering & Transportation')
+Not enough data for ('rv', 'Engineering & Transportation'), num_docs = 8 < 20 = limit.
+[(0,
+  '0.004*"studio" + 0.004*"rear" + 0.003*"dell" + 0.003*"thith" + 0.003*"slim" '
+  '+ 0.003*"make" + 0.003*"gt500" + 0.003*"front" + 0.003*"said" + '
+  '0.003*"end"')]
+
+---------------------------
+Now in ('rv', 'Literature & Fiction')
+Support is 81
+[(0,
+  '0.004*"one" + 0.003*"like" + 0.003*"time" + 0.003*"also" + 0.002*"film" + '
+  '0.002*"new" + 0.002*"great" + 0.002*"would" + 0.002*"good" + 0.002*"first"')]
+
+---------------------------
+Now in ('rv', 'Medicine & Health Sciences')
+Not enough data for ('rv', 'Medicine & Health Sciences'), num_docs = 1 < 20 = limit.
+[(0,
+  '0.005*"life" + 0.004*"money" + 0.004*"one" + 0.003*"power" + 0.003*"make" + '
+  '0.003*"instincts" + 0.002*"white" + 0.002*"jones" + 0.002*"much" + '
+  '0.002*"things"')]
+
+---------------------------
+Now in ('rv', 'None')
+Support is 23
+[(0,
+  '0.004*"like" + 0.004*"one" + 0.003*"good" + 0.003*"also" + 0.003*"time" + '
+  '0.002*"get" + 0.002*"go" + 0.002*"us" + 0.002*"day" + 0.002*"take"')]
+
+---------------------------
+Now in ('rv', 'Politics & Social Sciences')
+Not enough data for ('rv', 'Politics & Social Sciences'), num_docs = 9 < 20 = limit.
+[(0,
+  '0.009*"homeaway" + 0.005*"owners" + 0.004*"money" + 0.004*"property" + '
+  '0.003*"get" + 0.003*"one" + 0.003*"us" + 0.003*"owner" + 0.003*"service" + '
+  '0.003*"would"')]
+
+---------------------------
+Now in ('sr', 'Engineering & Transportation')
+Not enough data for ('sr', 'Engineering & Transportation'), num_docs = 3 < 20 = limit.
+[(0,
+  '0.008*"music" + 0.007*"said" + 0.005*"championship" + 0.004*"race" + '
+  '0.004*"one" + 0.004*"make" + 0.003*"belly" + 0.003*"first" + 0.003*"states" '
+  '+ 0.003*"pork"')]
+
+---------------------------
+Now in ('sr', 'Literature & Fiction')
+Support is 72
+[(0,
+  '0.004*"first" + 0.003*"one" + 0.003*"year" + 0.003*"team" + 0.003*"eagles" '
+  '+ 0.003*"two" + 0.003*"season" + 0.002*"game" + 0.002*"new" + '
+  '0.002*"video"')]
+
+---------------------------
+Now in ('sr', 'None')
+Support is 21
+[(0,
+  '0.003*"new" + 0.003*"time" + 0.003*"one" + 0.003*"flight" + 0.003*"also" + '
+  '0.003*"–" + 0.003*"first" + 0.003*"get" + 0.002*"two" + 0.002*"take"')]
+
+---------------------------
+Now in ('sr', 'Politics & Social Sciences')
+Support is 40
+[(0,
+  '0.004*"said" + 0.003*"first" + 0.003*"one" + 0.003*"also" + 0.003*"would" + '
+  '0.002*"two" + 0.002*"team" + 0.002*"time" + 0.002*"news" + 0.002*"get"')]
+
+perpelixity...?
+Job ID: 3644331
+Cluster: mahti
+User/Group: mynttiam/mynttiam
+State: RUNNING
+Nodes: 1
+Cores per node: 256
+CPU Utilized: 00:06:15
+CPU Efficiency: 0.34% of 1-06:13:20 core-walltime
+Job Wall-clock time: 00:07:05
+Memory Utilized: 256.28 MB
+Memory Efficiency: 0.11% of 234.38 GB
+Job consumed 11.81 CSC billing units based on following used resources
+Billed project: project_2009199
+Non-Interactive BUs: 11.81
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

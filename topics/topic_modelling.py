@@ -12,9 +12,12 @@ import pandas as pd
 #input = sys.argv[1]
 #amount = int(sys.argv[2])
 topics = int(sys.argv[1])
-amount=1000
+num_words = int(sys.argv[2])
+amount=2000
 limit=20
 
+print(f'Topic analysis for genre-register labelled data. \nUsing {topics} topics from <= {amount} suffled documents, with classes where num_examples < {limit} is marked separately.')
+print('Stopwords from nltk english and wordnetlemmatizer. Lowercased and punctuation cleaned.')
 stop = set(stopwords.words('english'))
 exclude = set(string.punctuation)
 lemma = WordNetLemmatizer()
@@ -37,8 +40,10 @@ groups = df2.groupby(['register_prediction', 'genre_prediction'])
 for name, d in groups:
     print(f'---------------------------\nNow in {name}')
     data = d["text"].tolist()
-    if len(data) < 10:
-        print(f'Not enough data for {name}.')
+    if len(data) < limit:
+        print(f'Not enough data for {name}, num_docs = {len(data)} < {limit} = limit.')
+    else:
+        print(f'Support is {len(data)}')
     random.shuffle(data)
     data = data[0:amount]
 
@@ -50,7 +55,7 @@ for name, d in groups:
     from pprint import pprint
     Lda = gensim.models.ldamodel.LdaModel
     ldamodel = Lda(doc_term_matrix, num_topics=topics, id2word =dictionary, passes=30)
-    pprint(ldamodel.print_topics(num_topics=topics, num_words=topics))
+    pprint(ldamodel.print_topics(num_topics=topics, num_words=num_words))
     print("")
-#print("perpelixity...?")
-#print(ldamodel.log_perplexity(data))
+print("perpelixity...?")
+print(ldamodel.log_perplexity(data))

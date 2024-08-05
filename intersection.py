@@ -2,11 +2,22 @@ import pandas as pd
 import plotly.graph_objects as go
 import seaborn as sns
 import numpy as np
+import os
 from datasets import concatenate_datasets
 #from transformers import AutoTokenizer
 import sys
 
-focus = "SP"
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="Process some parameters.")
+    # Required argument: --path
+    parser.add_argument('--path', type=str, required=True, help='A string path to data')
+    # Optional argument: --cmap with default value
+    parser.add_argument('--cmap', type=str, default='Set3', help='Color map, defaults to "Set3"')
+    # Optional argument: --focus with choices and default value
+    parser.add_argument('--focus', type=str, choices=['HI','IN','IP','ID','LY','NA','OP','SP'], default=None, help='Focus area, choices are ["NA", "IN"]')
+    # Optional flag: --use_log
+    parser.add_argument('--use_log', type=int, default=0, help='If >0, scale plot thickness')
+    return parser.parse_args()
 
 # Modified from 
 # https://github.com/TurkuNLP/pytorch-registerlabeling/blob/main/src/tools/plot_sankey_xgenre_mapping.py
@@ -43,14 +54,35 @@ labels_all_hierarchy_with_other = {
 }
 
 
+def read_data(path):
 
+    # Initialize an empty list to store DataFrames
+    dfs = []
 
-def run(path, use_log, colormap_name, n_colors=20):
+    # Walk through the directory
+    for subdir, _, _ in os.walk(path):
+        # Find all .tsv files in the current directory
+        for file in glob.glob(os.path.join(subdir, '*.tsv')):
+            # Read the file into a DataFrame
+            df = pd.read_csv(file, sep='\t')
+            print(f'Read {file} succesfully.', flush=True)
+            # Append the DataFrame to the list
+            dfs.append(df)
 
-    palette = sns.color_palette(colormap_name, n_colors=n_colors).as_hex()[1:]
-    print(f'Reading {path}...')
-    df = pd.read_csv(path, delimiter="\t")
-    df = df.drop(columns="text")
+    combined_df = pd.concat(dfs, ignore_index=True)
+    combined_df.reset_index(drop=True, inplace=True)
+
+    # Now `combined_df` contains data from all .tsv files
+    print("All data read.", flush=True)
+    return combined_df
+
+def run(options, n_colors=20):
+
+    palette = sns.color_palette(options.cmap, n_colors=n_colors).as_hex()[1:]
+    print(f'Reading in {options.path}...')
+    #df = pd.read_csv(options.path, delimiter="\t")
+    #df = df.drop(columns="text")
+    df = read_data(options.path)
     # Convert to main labels
     #df["register_prediction"] = df["register_prediction"].apply(
     #    lambda labels: map_childless_upper_to_other(labels.split())
@@ -131,12 +163,12 @@ def run(path, use_log, colormap_name, n_colors=20):
         for sub_key, value in sub_dict.items():
             sources.append(node_indices[main_key])
             targets.append(node_indices[sub_key])
-            if use_log > 0:
-                values.append(np.log(value) / np.log(use_log))
+            if options.use_log > 0:
+                values.append(np.log(value) / np.log(options.use_log))
                 #values.append(np.log2(value))
             else:
                 values.append(value)
-            if main_key == register_names[focus]:
+            if options.focus in register_names and main_key == register_names[options.focus]:
                 colors.append('rgba(0, 0, 0, 1.0)')
             else:
                 colors.append('rgba(211, 211, 211, 0.5)')
@@ -163,11 +195,19 @@ def run(path, use_log, colormap_name, n_colors=20):
 )
     
     # Show the plot
-    fig.write_image("plots/focus_plots/fig_NEW_Focus_"+focus+"_register_oscar_grey_correct_thresholds"+str(use_log)+"_"+str(colormap_name)+".png")
+    address = "plots/"
+    if options.focus is not None:
+        address += "focus_plots/fig_"+str(options.focus)+"_"
+    address+="reg_oscar_log-"+str(options.use_log)+".png"
+    os.makedir("/".join(address.split("/")[0:-1])+"/")
+    #fig.write_image("plots/focus_plots/fig_NEW_Focus_"+focus+"_register_oscar_grey_correct_thresholds"+str(use_log)+"_"+str(colormap_name)+".png")
+    fig.write_image(address)
     
     
 if __name__ == "__main__":
-    path = sys.argv[1]
-    use_log = int(sys.argv[2]) if len(sys.argv) > 2 else 0
-    c_map = sys.argv[3] if len(sys.argv) > 3 else "Set3"
-    run(path, use_log, c_map)
+    #path = sys.argv[1]
+    #focus = sys.argv[2]
+    #use_log = int(sys.argv[4]) if len(sys.argv) > 2 else 0
+    #c_map = sys.argv[3] if len(sys.argv) > 3 else "Set3"
+    options = parse_arguments()
+    run(options)

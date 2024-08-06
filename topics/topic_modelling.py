@@ -7,6 +7,8 @@ import sys
 import json
 import random
 import pandas as pd
+import os
+import glob
 
 #print(sys.argv)
 #input = sys.argv[1]
@@ -27,7 +29,30 @@ def clean(doc):
     punc_free = ''.join(lemma.lemmatize(ch) for ch in stop_free if ch not in exclude)
     return punc_free
 
-df_all = pd.read_csv("/scratch/project_2002026/amanda/reg-vs-genre/old-results/reg-oscar/large_large_03_04.tsv", sep="\t")
+def read_data(path):
+
+    # Initialize an empty list to store DataFrames
+    dfs = []
+
+    # Walk through the directory
+    for subdir, _, _ in os.walk(path):
+        # Find all .tsv files in the current directory
+        for file in glob.glob(os.path.join(subdir, '*.tsv')):
+            # Read the file into a DataFrame
+            df = pd.read_csv(file, sep='\t')
+            print(f'Read {file} succesfully.', flush=True)
+            # Append the DataFrame to the list
+            dfs.append(df)
+
+    combined_df = pd.concat(dfs, ignore_index=True)
+    combined_df.reset_index(drop=True, inplace=True)
+
+    # Now `combined_df` contains data from all .tsv files
+    print("All data read.", flush=True)
+    return combined_df
+
+
+df_all = read_data("/scratch/project_2009199/register-vs-genre/results/")
 
 from ast import literal_eval
 df2 = pd.DataFrame()

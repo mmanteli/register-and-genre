@@ -3,9 +3,11 @@ import plotly.graph_objects as go
 import seaborn as sns
 import numpy as np
 import os
+import glob
 from datasets import concatenate_datasets
 #from transformers import AutoTokenizer
 import sys
+import argparse
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Process some parameters.")
@@ -14,7 +16,7 @@ def parse_arguments():
     # Optional argument: --cmap with default value
     parser.add_argument('--cmap', type=str, default='Set3', help='Color map, defaults to "Set3"')
     # Optional argument: --focus with choices and default value
-    parser.add_argument('--focus', type=str, choices=['HI','IN','IP','ID','LY','NA','OP','SP'], default=None, help='Focus area, choices are ["NA", "IN"]')
+    parser.add_argument('--focus', type=str, choices=['HI','IN','IP','ID','LY','NA','OP','SP', 'MT'], default=None, help='Focus area, choices are ["NA", "IN"]')
     # Optional flag: --use_log
     parser.add_argument('--use_log', type=int, default=0, help='If >0, scale plot thickness')
     return parser.parse_args()
@@ -100,7 +102,7 @@ def run(options, n_colors=20):
         .unstack(fill_value=0)
         .to_dict(orient="index")
     )
-
+    print("Data grouping complete")
     num_total = len(df)
     reg_labels = data.keys()
     gen_labels = data["HI"].keys()
@@ -121,7 +123,8 @@ def run(options, n_colors=20):
                       "LY":"Lyrical",
                       "NA":"Narrative",
                       "OP":"Opinion",
-                      "SP":"Spoken"
+                      "SP":"Spoken",
+                      "MT":"Machine transl."
                      }
     
     # Create a mapping of node names to indices
@@ -199,7 +202,10 @@ def run(options, n_colors=20):
     if options.focus is not None:
         address += "focus_plots/fig_"+str(options.focus)+"_"
     address+="reg_oscar_log-"+str(options.use_log)+".png"
-    os.makedir("/".join(address.split("/")[0:-1])+"/")
+    folder = "/".join(address.split("/")[0:-1])+"/"
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+    print(f'Saving to {address}')
     #fig.write_image("plots/focus_plots/fig_NEW_Focus_"+focus+"_register_oscar_grey_correct_thresholds"+str(use_log)+"_"+str(colormap_name)+".png")
     fig.write_image(address)
     
@@ -210,4 +216,5 @@ if __name__ == "__main__":
     #use_log = int(sys.argv[4]) if len(sys.argv) > 2 else 0
     #c_map = sys.argv[3] if len(sys.argv) > 3 else "Set3"
     options = parse_arguments()
+    print(options)
     run(options)

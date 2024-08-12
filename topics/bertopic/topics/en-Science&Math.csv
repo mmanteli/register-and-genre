@@ -1,0 +1,5 @@
+,Topic,Count,Name,Representation
+0,-1,39,-1_the_of_and_in,"['the', 'of', 'and', 'in', 'to', 'as', 'is', 'was', 'for', 'by']"
+1,0,41,0_the_of_and_in,"['the', 'of', 'and', 'in', 'to', 'is', 'that', 'as', 'for', 'by']"
+2,1,40,1_the_and_of_to,"['the', 'and', 'of', 'to', 'in', 'is', 'are', 'as', 'with', 'it']"
+3,2,29,2_the_and_to_of,"['the', 'and', 'to', 'of', 'in', 'is', 'that', 'it', 'avocado', 'for']"

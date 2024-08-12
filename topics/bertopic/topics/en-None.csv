@@ -1,0 +1,11 @@
+,Topic,Count,Name,Representation
+0,-1,111,-1_the_and_of_in,"['the', 'and', 'of', 'in', 'to', 'was', 'for', 'is', 'on', 'with']"
+1,0,64,0_the_and_in_of,"['the', 'and', 'in', 'of', 'to', 'from', 'as', 'for', 'with', 'on']"
+2,1,44,1_the_of_and_in,"['the', 'of', 'and', 'in', 'to', 'is', 'was', 'with', 'as', 'for']"
+3,2,31,2_of_the_and_disease,"['of', 'the', 'and', 'disease', 'to', 'in', 'is', 'or', 'that', 'as']"
+4,3,18,3_the_chromosome_of_in,"['the', 'chromosome', 'of', 'in', 'and', 'is', 'to', 'are', 'cells', 'that']"
+5,4,17,4_the_and_to_in,"['the', 'and', 'to', 'in', 'of', 'race', 'for', 'triathlon', 'on', 'is']"
+6,5,16,5_the_to_and_of,"['the', 'to', 'and', 'of', 'publishers', 'in', 'is', 'for', 'publishing', 'that']"
+7,6,12,6_fill_up_or_full,"['fill', 'up', 'or', 'full', 'air', 'vapor', 'to', 'space', 'of', 'in']"
+8,7,12,7_the_of_is_in,"['the', 'of', 'is', 'in', 'and', 'to', 'as', 'or', 'are', 'music']"
+9,8,10,8_the_to_eriksson_in,"['the', 'to', 'eriksson', 'in', 'was', 'of', 'and', 'for', 'on', 'by']"

@@ -325,7 +325,12 @@ def run(options, n_colors=20):
     print("data_reg2gen = ", data)
     print("Data grouping complete")
 
-    plot_sankey(new_data2, data)
+    print("")
+    print(f"left_to_center = {new_data2}")
+    print("")
+    print(f"center_to_right = {data}")
+    print("")
+    #plot_sankey(new_data2, data)
     exit()
 
 
